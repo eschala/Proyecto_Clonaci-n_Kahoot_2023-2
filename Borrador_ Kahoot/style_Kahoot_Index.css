@@ -1,0 +1,73 @@
+.body_Ingreso{
+    background-color: rgb(116, 43, 226);
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 98vh;
+}
+
+.mainContainer_Index{
+    display: flex;
+
+
+    justify-content: center;
+    align-items: center;
+
+}
+.container_Section{
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.sub_Container_1{
+
+    width: auto;
+    height: auto;
+
+
+    background-color: aliceblue;
+
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text_ingresar{
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.container_Ingresar{
+    height: 50px;
+    width:200px;
+
+    margin: 25px;
+
+}
+.text_ingresar{
+    margin-top: 15px;
+    margin-left:15px;
+    margin-right:15px;
+    margin-bottom:7.5px;
+}
+.btn_ingresar{
+    margin-top: 7.5px;
+    margin-left:15px;
+    margin-right:15px;
+    margin-bottom:15px;
+}
