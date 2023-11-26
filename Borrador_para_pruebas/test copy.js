@@ -1,5 +1,5 @@
-const contenedor1_Show=document.querySelector("container");
-const contenedor2_Show=document.querySelector("container_2");
+const contenedor1_Show=document.querySelector(".container");
+const contenedor2_Show=document.querySelector(".container_2");
 
 /* contenedor2_Show.style.display="none"; */
 
@@ -92,17 +92,17 @@ button_2.addEventListener("click", () => validarRespuesta(button_2));
 button_3.addEventListener("click", () => validarRespuesta(button_3));
 button_4.addEventListener("click", () => validarRespuesta(button_4));
 
-input_Btn_NEXT.addEventListener("click", nextQuestion);
+
 
 const nextQuestion=()=>{
 
-
-  contenedor1_Show.style.display="none";
+  alert("Siguiente");
+  contenedor1_Show.style.display = "none";
 
 
 }
 
-
+input_Btn_NEXT.addEventListener("click", nextQuestion);
 
  /* Verdadero o Falso */
   const titulo_H1_2 = document.querySelector(".tittle_2");
