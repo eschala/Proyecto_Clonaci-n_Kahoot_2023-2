@@ -1,17 +1,13 @@
-const contenedor1_Show=document.querySelector(".container");
-const contenedor2_Show=document.querySelector(".container_2");
+const contenedor1_Show = document.querySelector(".container");
+const contenedor2_Show = document.querySelector(".container_2");
 
-/* contenedor2_Show.style.display="none"; */
+contenedor2_Show.style.display = "none";
 
-{/* 4 Respuestas */
+/* 4 Respuestas */
 const titulo_H1 = document.querySelector(".tittle");
 const input_Btn = document.querySelector(".button_Enviar");
 
 const input_Btn_NEXT = document.querySelector(".siguiente");
-
-
-
-
 
 const alertAdvice = document.querySelector(".advice");
 
@@ -19,6 +15,8 @@ const button_1 = document.querySelector(".btn_1");
 const button_2 = document.querySelector(".btn_2");
 const button_3 = document.querySelector(".btn_3");
 const button_4 = document.querySelector(".btn_4");
+
+const buttonArray = [button_2, button_3, button_4];
 
 class Quiz {
   constructor(pregunta, opcionC, opcionI, opcionI2, opcionI3) {
@@ -75,100 +73,119 @@ const validarRespuesta = (opcionElegida) => {
   const respuestaCorrecta = answer1.getOpcionC();
 
   if (respuestaSeleccionada === respuestaCorrecta) {
-    alertAdvice.innerHTML="¡Respuesta correcta! "+respuestaCorrecta;
+    alertAdvice.innerHTML = "¡Respuesta correcta! " + respuestaCorrecta;
 
+    button_1.style.backgroundColor = "blue";
   } else {
-    alertAdvice.innerHTML="Respuesta incorrecta. Inténtalo de nuevo.";
-
+    alertAdvice.innerHTML = "Respuesta incorrecta. Inténtalo de nuevo.";
   }
 };
-
 input_Btn.addEventListener("click", mostrarInfoQuiz);
 
+const clickButton_1 = () => {
+  button_1.style.backgroundColor = "blue";
+  button_2.style.backgroundColor = "";
+  button_3.style.backgroundColor = "";
+  button_4.style.backgroundColor = "";
+};
+const clickButton_2 = () => {
+  button_2.style.backgroundColor = "red";
+  button_1.style.backgroundColor = "";
+  button_3.style.backgroundColor = "";
+  button_4.style.backgroundColor = "";
+};
+const clickButton_3 = () => {
+  button_3.style.backgroundColor = "red";
+  button_2.style.backgroundColor = "";
+  button_1.style.backgroundColor = "";
+  button_4.style.backgroundColor = "";
+};
+const clickButton_4 = () => {
+  button_4.style.backgroundColor = "red";
+  button_2.style.backgroundColor = "";
+  button_3.style.backgroundColor = "";
+  button_1.style.backgroundColor = "";
+};
 
+button_1.addEventListener("click", clickButton_1);
+button_2.addEventListener("click", clickButton_2);
+button_3.addEventListener("click", clickButton_3);
+button_4.addEventListener("click", clickButton_4);
 
 button_1.addEventListener("click", () => validarRespuesta(button_1));
 button_2.addEventListener("click", () => validarRespuesta(button_2));
 button_3.addEventListener("click", () => validarRespuesta(button_3));
 button_4.addEventListener("click", () => validarRespuesta(button_4));
 
-
-
-const nextQuestion=()=>{
-
-  alert("Siguiente");
+const nextQuestion = () => {
   contenedor1_Show.style.display = "none";
-
-
-}
+  contenedor2_Show.style.display = "block";
+};
 
 input_Btn_NEXT.addEventListener("click", nextQuestion);
 
- /* Verdadero o Falso */
-  const titulo_H1_2 = document.querySelector(".tittle_2");
-  const input_Btn_2 = document.querySelector(".button_Enviar_2");
-  
+/* Verdadero o Falso */
+const titulo_H1_2 = document.querySelector(".tittle_2");
+const input_Btn_2 = document.querySelector(".button_Enviar_2");
 
-  
-  const button_T = document.querySelector(".btn_True");
-  const button_F = document.querySelector(".btn_False");
+const button_T = document.querySelector(".btn_True");
+const button_F = document.querySelector(".btn_False");
 
-  
-  class Quiz_VF {
-    constructor(preguntaVF, opcionV, opcionF) {
-      this.preguntaVF = preguntaVF;
-      this.opcionV = opcionV;
-      this.opcionF = opcionF;
-
-    }
-    infoQ() {
-      return `La pregunta es ${this.preguntaVF}. La correcta es: ${this.opcionV}. Falsa: ${this.opcionF}`;
-    }
-    getPregunta() {
-      return this.preguntaVF;
-    }
-    getOpcionV() {
-      return this.opcionV;
-    }
-    getOpcionF() {
-      return this.opcionF;
-    }
-
+class Quiz_VF {
+  constructor(preguntaVF, opcionV, opcionF) {
+    this.preguntaVF = preguntaVF;
+    this.opcionV = opcionV;
+    this.opcionF = opcionF;
   }
-  
-  const pregunta_QuizVF = "2+2 es 4?";
-  const opcion_V = "Verdadero";
-  const opcion_F = "Falso";
-
-  const answer3 = new Quiz_VF(
-    pregunta_QuizVF,
-    opcion_V,
-    opcion_F
-  );
-  
-  const mostrarInfoQuiz_VF = () => {
-    titulo_H1_2.innerHTML = answer3.getPregunta();
-    button_T.innerHTML = answer3.getOpcionV();
-    button_F.innerHTML = answer3.getOpcionF();
-
-  };
-  
-  const validarRespuesta_VF = (opcionElegida) => {
-    const respuestaSeleccionada_VF = opcionElegida.innerHTML;
-    const respuestaCorrecta_VF = answer3.getOpcionV();
-  
-    if (respuestaSeleccionada_VF === respuestaCorrecta_VF) {
-      alertAdvice.innerHTML="¡Respuesta correcta! "+respuestaCorrecta_VF;
-  
-    } else {
-      alertAdvice.innerHTML="Respuesta incorrecta. Inténtalo de nuevo.";
-  
-    }
-  };
-  
-  input_Btn_2.addEventListener("click", mostrarInfoQuiz_VF);
-  
-  button_T.addEventListener("click", () => validarRespuesta_VF(button_T));
-  button_F.addEventListener("click", () => validarRespuesta_VF(button_F));
-
+  infoQ() {
+    return `La pregunta es ${this.preguntaVF}. La correcta es: ${this.opcionV}. Falsa: ${this.opcionF}`;
   }
+  getPregunta() {
+    return this.preguntaVF;
+  }
+  getOpcionV() {
+    return this.opcionV;
+  }
+  getOpcionF() {
+    return this.opcionF;
+  }
+}
+
+const pregunta_QuizVF = "2+2 es 4?";
+const opcion_V = "Verdadero";
+const opcion_F = "Falso";
+
+const answer3 = new Quiz_VF(pregunta_QuizVF, opcion_V, opcion_F);
+
+const mostrarInfoQuiz_VF = () => {
+  titulo_H1_2.innerHTML = answer3.getPregunta();
+  button_T.innerHTML = answer3.getOpcionV();
+  button_F.innerHTML = answer3.getOpcionF();
+};
+
+const validarRespuesta_VF = (opcionElegida) => {
+  const respuestaSeleccionada_VF = opcionElegida.innerHTML;
+  const respuestaCorrecta_VF = answer3.getOpcionV();
+
+  if (respuestaSeleccionada_VF === respuestaCorrecta_VF) {
+    alertAdvice.innerHTML = "¡Respuesta correcta! " + respuestaCorrecta_VF;
+  } else {
+    alertAdvice.innerHTML = "Respuesta incorrecta. Inténtalo de nuevo.";
+  }
+};
+
+input_Btn_2.addEventListener("click", mostrarInfoQuiz_VF);
+
+button_T.addEventListener("click", () => validarRespuesta_VF(button_T));
+button_F.addEventListener("click", () => validarRespuesta_VF(button_F));
+
+const clickButton_V = () => {
+  button_T.style.backgroundColor = "blue";
+  button_F.style.backgroundColor = "";
+};
+const clickButton_F = () => {
+  button_T.style.backgroundColor = "";
+  button_F.style.backgroundColor = "red";
+};
+button_T.addEventListener("click", clickButton_V);
+button_F.addEventListener("click", clickButton_F);
