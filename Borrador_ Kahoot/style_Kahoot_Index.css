@@ -6,7 +6,6 @@
     -webkit-box-pack: center;
     justify-content: center;
     align-items: center;
-
     height: 98vh;
 }
 
@@ -20,18 +19,14 @@
 }
 .container_Section{
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
-
 }
 .sub_Container_1{
-    
-    width: auto;
+    width: 300px;
     height: auto;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,11 +47,19 @@
     height: 50px;
     width: 100%;
     font-family: 'Montserrat';
-    margin: 25px;
+    margin: 0px;
     font-weight: bold;
+    color: #ffffff;
     font-size: 1rem;
     background: rgb(48, 48, 48);
+    
 }
+.container_Ingresar_text_ingresar{
+color: inherit;
+border: 0.125rem solid rgb(204, 204, 204);
+border-radius: 1px;
+}
+
 .text_ingresar{
     margin-top: 15px;
     margin-left:15px;
@@ -70,4 +73,14 @@
     margin-left:15px;
     margin-right:15px;
     margin-bottom:15px;
+}
+
+.logo{
+background: url("https://assets-cdn.kahoot.it/controller/v2/assets/topbar_logo-58b66a21.svg") no-repeat center center;
+width: 200px;
+height: 200px;
+}
+
+.container_Ingresar:hover{
+    cursor: pointer;
 }
