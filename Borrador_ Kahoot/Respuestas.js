@@ -1,3 +1,14 @@
+function ingresarJuego() {
+  const pinInput = document.getElementById('pinInput').value;
+
+  if (pinInput) {
+    alert('Ingresando al juego con PIN: ' + pinInput);
+    // Puedes redirigir a la siguiente página, realizar verificaciones, etc.
+  } else {
+    alert('Por favor, ingresa un PIN válido.');
+  }
+}
+
 class quiz_4_Answers {
   /* pregunta de 4 opciones */
   constructor(
