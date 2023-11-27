@@ -7,4 +7,4 @@ container_TEST.addEventListener("click",mostrarA);
 container_TEST2.addEventListener("click",mostrarINFORMACION);
 
 
-import { checkAnswer } from "./4_Respuestas.js"
+import { checkAnswer } from "./4_Respuestas.js";
