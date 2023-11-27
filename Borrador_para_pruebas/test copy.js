@@ -5,7 +5,7 @@ contenedor2_Show.style.display = "none";
 
 /* 4 Respuestas */
 const titulo_H1 = document.querySelector(".tittle");
-const input_Btn = document.querySelector(".button_Enviar");
+/* const input_Btn = document.querySelector(".button_Enviar"); */
 
 const input_Btn_NEXT = document.querySelector(".siguiente");
 
@@ -80,7 +80,9 @@ const validarRespuesta = (opcionElegida) => {
     alertAdvice.innerHTML = "Respuesta incorrecta. Inténtalo de nuevo.";
   }
 };
-input_Btn.addEventListener("click", mostrarInfoQuiz);
+/* input_Btn.addEventListener("click", mostrarInfoQuiz); */
+
+mostrarInfoQuiz();
 
 const clickButton_1 = () => {
   button_1.style.backgroundColor = "blue";
@@ -174,7 +176,8 @@ const validarRespuesta_VF = (opcionElegida) => {
   }
 };
 
-input_Btn_2.addEventListener("click", mostrarInfoQuiz_VF);
+/* input_Btn_2.addEventListener("click", mostrarInfoQuiz_VF); */
+mostrarInfoQuiz_VF();
 
 button_T.addEventListener("click", () => validarRespuesta_VF(button_T));
 button_F.addEventListener("click", () => validarRespuesta_VF(button_F));
@@ -189,3 +192,8 @@ const clickButton_F = () => {
 };
 button_T.addEventListener("click", clickButton_V);
 button_F.addEventListener("click", clickButton_F);
+
+
+
+const timer_Show=document.querySelector(".timer");
+const timer_Show_VF=document.querySelector(".timer_VF");
