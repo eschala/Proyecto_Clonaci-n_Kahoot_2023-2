@@ -118,9 +118,9 @@ position: absolute;
         flex-direction: row;
         align-items: center;
         margin-top: 10px;
-      }
-      
-      .terminos {
+    }
+    
+    .terminos {
         font-family: 'Montserrat';
         color: #e0e0e0;
         font-weight: 600;
