@@ -52,13 +52,9 @@
     color: #ffffff;
     font-size: 1rem;
     background: rgb(48, 48, 48);
-    
+    border-radius: 5px;
 }
-.container_Ingresar_text_ingresar{
-color: inherit;
-border: 0.125rem solid rgb(204, 204, 204);
-border-radius: 1px;
-}
+
 
 .text_ingresar{
     margin-top: 15px;
@@ -67,6 +63,7 @@ border-radius: 1px;
     margin-bottom:7.5px;
     background: #ffffff;
     text-align: center;
+    color: inherit;
 }
 .btn_ingresar{
     margin-top: 7.5px;
@@ -81,6 +78,18 @@ width: 200px;
 height: 200px;
 }
 
-.container_Ingresar:hover{
-    cursor: pointer;
+.info{
+    font-family: 'Montserrat';
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.axx{
+    color: #ffffff;
+    display: flex;
+    margin-left: 6px;
+    font-weight: bold;
+    text-decoration: none;
 }
