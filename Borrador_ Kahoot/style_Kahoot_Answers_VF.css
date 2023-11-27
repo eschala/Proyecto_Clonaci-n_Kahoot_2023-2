@@ -3,30 +3,35 @@
 }
 
 .body_Answer_VF {
-    height: 98vh;
-    max-height: 98vh;
-    min-height: 98vh;  
-    display: flex;
-    background-image: url("img/fondo_pantalla.jpg");
-    background-position: center;
+    height: 100%;
+    width: 100dvw;
+    /*background-image: url("img/fondo_pantalla.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:cover;*/
 }
 
 
 .mainContainer_Answer_VF {/* Contenedor padre */
     /*background-color: rgba(0, 0, 0, 0.361);*/
-    height: 100%;
+    height: 1000%;
+    width: 90%;
+    background-color: red;
 }
 
 .container_1_VF {/* Contenedores hijos del principal */
-    border: 0px black solid;
-    height: 140px;
-    height: 15.625%;
-    /*background-color: rgba(135, 222, 142, 0.369);*/
+    border: 0% black solid;
+    height: 400%;
+    width: 90%;
+    background-color: rgba(135, 222, 142, 0.369);
     display: flex;
     justify-content: center;
     align-items: start;
+}
+.btn_container_1__sub_VF{
+    justify-content: center;
+    align-items:flex-end;
+    background-color:#FFFFFF;
+    
 }
 .container_1__sub_VF{/* contenedor hijo de  container_1 AQUÍ VA LA PREGUNTA*/
     width: 50vw;
@@ -43,9 +48,9 @@
 }
 
 .container_2_VF {/* Contenedores hijos del principal TEMPORIZADOR Y RESPUESTA*/
-    border: 0px black solid;
-    height: 516px;
-    height: 57.58928571%;
+    border: 0% black solid;
+    height: 400%;
+    width: 90%;
     background-color: rgba(222, 184, 135, 0);
     display: flex;
     justify-content: space-between;
@@ -56,9 +61,9 @@
 .container_3_VF {/* Contenedores hijos del principal */
     display: flex;
     justify-content: center;
-    border: 0px black solid;
-    height: 240px;
-    height: 26.78571429%;
+    border: 0% black solid;
+    height: 400%;
+    width: 90%;
     /*background-color: rgb(141, 135, 222);*/
 }
 
@@ -77,7 +82,6 @@
     width: 100%;
     height: 100%;
     border: 0px;
-
     border-radius: 5px;
     font-size: 30px;
 }
@@ -129,10 +133,10 @@
 }
 
 .container_2__sub_1__2_VF{/* contenedor de h1 */
-    background-color: (darkorange).0;
+    background-color: (darkorange);
 }
 
-.timer {/* Temporizador */
+.timer_VF {/* Temporizador */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -143,14 +147,25 @@
     width: 70px;
     height: 70px;
     color: aliceblue;
+    
+}
+.timer_V {/* Temporizador */
+    width: 120px;
+    height: 120px;
 }
 
 .Answer_VF{/* Contador de Respuestas */  
     
     text-align: left;
     align-items: center;
-    width:250px;
-    height: 100%;   
+    width:100px;
+    height: 100%;       
+    color: #FFFFFF;
+    margin: 8px 0px 0px 50px 5px;
+    padding:4px 12px;
+    background-color:rgb(132, 0, 255);
+    border-radius: 15px;
+      
     
 }
 
@@ -210,6 +225,6 @@
 }
 .texto_VF{
     color:#FFFFFF;
-    margin-right: 550px;
+    text-align: left;
     
 }
