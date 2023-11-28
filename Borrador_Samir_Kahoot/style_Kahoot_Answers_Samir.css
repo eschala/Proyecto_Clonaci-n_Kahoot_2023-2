@@ -4,7 +4,7 @@
 
 .body_Answer {
     height: 100vh;
-    width: auto;
+
     
     background-image: url("img/fondo_pantalla.jpg");
     background-position: center;
@@ -17,11 +17,13 @@
 
 }
 
-.mainContainer_Answer {/* Contenedor padre */
+.mainContainer_Answer {/* Contenedor padre y SELECTOR DE TIPO DE PREGUNTAS de 4 respuestas*/
     background-color: rgba(0, 0, 0, 0.08);
     height: 100%;
 
     border: 1px solid black;
+
+
 }
 
 .container_1 {/* Contenedores hijos del principal */
@@ -48,8 +50,9 @@
 
 .container_2 {/* Contenedores hijos del principal */
     border: 0px black solid;
-    height: 516px;
+
     height: 57.58928571%;
+    height: 55vh;
     background-color: rgba(222, 184, 135, 0);
 }
 
@@ -59,6 +62,7 @@
     border: 0px black solid;
     height: 240px;
     height: 26.78571429%;
+    height: 26vh;
     background-color: rgba(141, 135, 222, 0.161);
 }
 
@@ -67,7 +71,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     /*gap: 1px; */ 
-    width: 100%;
+    width: 99vw;
 
 
 
@@ -84,6 +88,10 @@
 .btn_div {
     padding: 5px;
     border: solid rgb(247, 0, 255) 0px;
+
+    display: flex;
+
+    align-items: flex-start;
 }
 
 .btn_Answer:hover {
@@ -140,6 +148,9 @@
 }
 
 .Answer {/* Contador de Respuestas  */
+
+
+    
     display: flex;
     justify-content: center;
     text-align: center;
@@ -150,6 +161,8 @@
     width:250px;
     height: 50px;
     color: aliceblue;
+
+
 }
 
 .btn_Answer {
@@ -161,6 +174,10 @@
     background-color: #4CAF50;
     color: #fff;
     opacity: 1;
+
+    display: flex;
+
+    align-items: center;
 }
 
 img{
@@ -201,5 +218,210 @@ img{
     background-color: rgb(64, 194, 52);
     color:aliceblue;
     font-weight:500;
+}
+
+
+
+
+
+
+/* ESTILOS SECCION Preguntas Verdadero o falso */
+
+
+.mainContainer_Answer_VF {/* Contenedor padre y SELECTOR DE TIPO DE PREGUNTAS de 4 respuestas*/
+    background-color: rgba(0, 0, 0, 0.08);
+    height: 100%;
+
+    border: 1px solid black;
+
+
+}
+
+.container_1_VF {/* Contenedores hijos del principal */
+    border: 0px black solid;
+    height: 140px;
+    height: 15.625%;
+    background-color: rgba(135, 222, 142, 0.082);
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.container_1__sub_VF{/* contenedor hijo de  container_1*/
+    width: 50vw;
+    height: 70%;
+    border: 0px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: rgb(255, 254, 252);
+    font-weight: 600;
+}
+
+.container_2_VF {/* Contenedores hijos del principal */
+    border: 0px black solid;
+
+    height: 57.58928571%;
+    height: 55vh;
+    background-color: rgba(222, 184, 135, 0);
+}
+
+.container_3_VF {/* Contenedores hijos del principal */
+    display: flex;
+    justify-content: center;
+    border: 0px black solid;
+    height: 240px;
+    height: 26.78571429%;
+    height: 26vh;
+    background-color: rgba(141, 135, 222, 0.161);
+}
+
+.container_3__sub_VF {/* contenedor hijo de container_3 */
+    border: 0px solid rgb(119, 255, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*gap: 1px; */ 
+    width: 99vw;
+
+
+
+}
+
+.btn_Answer_VF {/* botones de Respuestas */
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.btn_div_VF {
+    padding: 5px;
+    border: solid rgb(247, 0, 255) 0px;
+
+    display: flex;
+
+    align-items: flex-start;
+}
+
+.btn_Answer_VF:hover {
+    opacity: 85%;
+}
+
+.container_2_VF {/* Contenedores hijos del principal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_2__sub_1_VF {
+    border: 0px solid black;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_2__sub_2_VF {
+    border: 0px solid rgb(83, 5, 5);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+
+}
+
+.container_2__sub_1__1_VF {/* contenedor de h1 */
+    display: block;
+    background-color: aqua.0;
+    height: auto;
+}
+
+.container_2__sub_1__2_VF {/* contenedor de h1 */
+    background-color: (darkorange);
+}
+
+.timer_VF {/* Temporizador */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 0px solid blue;
+    background-color: rgb(132, 0, 255);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    color: aliceblue;
+}
+
+.Answer_VF {/* Contador de Respuestas  */
+
+
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 0px solid blue;
+    background-color: rgb(132, 0, 255);
+    border-radius: 100px;
+    width:250px;
+    height: 50px;
+    color: aliceblue;
+
+
+}
+
+.btn_Answer_VF {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    opacity: 1;
+
+    display: flex;
+
+    align-items: center;
+}
+
+img{
+    color: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    flex: 0 0 auto;
+    z-index: 90;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 1rem;
+    min-height: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 5.104vmin;
+    height: 5.104vmin;
+}
+
+.Answer_V{/* boton Respuesta VERDADERA */
+    background-color: #1368CE;
+    color:aliceblue;
+    font-weight:500;
+
+    order: 0;
+}
+.Answer_F{/* boton Respuesta FALSA */
+    background-color: #E21B3C;
+    color:aliceblue;
+    font-weight:500;
+
+    order: 1;
 }
 
