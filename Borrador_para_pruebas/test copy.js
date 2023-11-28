@@ -1,5 +1,12 @@
 const contenedor1_Show = document.querySelector(".container");
 const contenedor2_Show = document.querySelector(".container_2");
+const botones_Select = document.querySelectorAll("button");
+
+/* var showDisplay = style.display="block"; */
+
+for (let index = 0; index < botones_Select.length; index++) {
+  botones_Select[index].style.width = "100px";
+}
 
 contenedor2_Show.style.display = "none";
 
@@ -122,6 +129,8 @@ button_4.addEventListener("click", () => validarRespuesta(button_4));
 const nextQuestion = () => {
   contenedor1_Show.style.display = "none";
   contenedor2_Show.style.display = "block";
+
+  activarTemporizador();
 };
 
 input_Btn_NEXT.addEventListener("click", nextQuestion);
@@ -193,7 +202,74 @@ const clickButton_F = () => {
 button_T.addEventListener("click", clickButton_V);
 button_F.addEventListener("click", clickButton_F);
 
+/* Temporizador de pregntas */
+
+const timer_Show = document.querySelector(".timer");
+const timer_Show_VF = document.querySelector(".timer_VF");
+
+var time_Limit = 5000;
+
+segundos = time_Limit / 1000;
+miliSegundos = 1000 * segundos;
+
+input_Btn_NEXT.style.display = "none";
+
+const adviceShow = () => {
+  alertAdvice.innerHTML = "Se acabó el tiempo xD";
+};
+const secondsShow = () => {};
+
+num = segundos;
+timer_Show.innerHTML = num;
+timer_Show_VF.innerHTML = num;
+
+var vecesRecorrida = 0;
+
+const alertAdvice2 = document.querySelector(".advice2");
+
+const contador = () => {
+  num = num - 1;
+
+  timer_Show.innerHTML = num;
+  timer_Show_VF.innerHTML = num;
+
+  if (num <= 0) {
+    alertAdvice2.innerHTML = "veces recorrido: " + vecesRecorrida;
+    vecesRecorrida++;
+
+    clickButton_1();
+    clearInterval(temporizador);
+    num = segundos + 1;
+
+    input_Btn_NEXT.style.display = "block";
+    if (vecesRecorrida > 1) {
+      clickButton_V();
+    }
+  }
+
+  /*   if (num <= 0) {
 
 
-const timer_Show=document.querySelector(".timer");
-const timer_Show_VF=document.querySelector(".timer_VF");
+    clearInterval(temporizador);
+    num=0;
+
+    adviceShow();
+    clickButton_1();
+    num = segundos;
+
+
+    
+    input_Btn_NEXT.style.display = "block";
+  }else{
+  timer_Show.innerHTML = num;
+  timer_Show_VF.innerHTML = num;
+} */
+};
+
+/* setTimeout(adviceShow,time_Limit); */
+
+const activarTemporizador = () => {
+  temporizador = setInterval(contador, 1000);
+};
+
+activarTemporizador();
