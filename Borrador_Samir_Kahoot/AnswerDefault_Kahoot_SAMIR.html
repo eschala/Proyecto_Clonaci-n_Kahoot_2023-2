@@ -12,19 +12,21 @@
 
     <style>
         .mainContainer_Answer_VF {
-            display: none;
+            display: block;
         }
 
         .mainContainer_Answer {
-            display: block;
+            display: none;
         }
-        .div_Answer_1_Answer{
-            position: absolute;
-            right: 30px;
+
+        .div_Answer_1_Answer {
+/*             position: absolute;
+            right: 30px; */
         }
-        .div_Answer_1_V{
-            position: absolute;
-            right: 30px;
+
+        .div_Answer_1_V {
+/*             position: absolute;
+            right: 30px; */
         }
     </style>
 
@@ -80,7 +82,7 @@
 
         <div class="sub__Container_VF container_1_VF"><!-- Contendores hijos del principal -->
             <div class="sub_Sub__Container_VF container_1__sub_VF">Aqui va la pregunta</div>
-            <div class="btn_div_VF div_Answer_1_V">
+            <div class="btn_div_VF div_Answer_1_VF">
                 <!-- Se agrega un botón que va ubicado en la parte superior derecha -->
                 <button type="button" class="btn_container_1__sub_VF ">
                     <h3 class="texto_boton_VF">Siguiente</h3>
@@ -101,24 +103,26 @@
             </div>
         </div>
         <div class="sub__Container_VF container_3_VF"><!-- Contendores hijos del principal -->
-            <div class="sub_Sub__Container_3_VF container_3__sub_VF">
-                <div class="btn_div_VF div_Answer_1_V">
 
-                    <button type="button" class="btn_Answer_VF  Answer_V  ">
-                        <img class="imgicon" src="img/rombo.png" alt="">
-                        <h3 class="texto_VF">Verdadero</h3><img class="imgicon" src="img/rombo.png" alt="">
-                    </button>
+            <div class="btn_div_VF div_Answer_1_V"><!-- Sub_3 -->
 
-                </div>
-                <div class="btn_div_VF div_Answer_2_F">
+                <button type="button" class="btn_Answer_VF  Answer_V  ">
+                    <img class="imgicon" src="img/rombo.png" alt="">
+                        <h3 class="texto_V">Verdadero</h3>
+                    <img class="imgicon" src="img/rombo.png" alt="">
+                </button>
 
-                    <button type="button" class="btn_Answer_VF  Answer_F ">
-                        <img class="imgicon" src="img/triangulo.png" alt="">
-                        <h3 class="texto_VF">Falso</h3><img class="imgicon" src="img/triangulo.png" alt="">
-                    </button>
-
-                </div>
             </div>
+            <div class="btn_div_VF div_Answer_2_F"><!-- Sub_3 -->
+
+                <button type="button" class="btn_Answer_VF  Answer_F ">
+                    <img class="imgicon" src="img/triangulo.png" alt="">
+                        <h3 class="texto_F">Falso</h3>
+                    <img class="imgicon" src="img/triangulo.png" alt="">
+                </button>
+
+            </div>
+
         </div>
 
     </div>
@@ -134,18 +138,18 @@
 
 
 
-        const mostrarContainer=()=>{
-            showContainerMAIN.style.display="block";
-            showContainerMAIN_2.style.display="none";
+        const mostrarContainer = () => {
+            showContainerMAIN.style.display = "block";
+            showContainerMAIN_2.style.display = "none";
         }
-        const mostrarContainer_2=()=>{
-            
-            showContainerMAIN_2.style.display="block";
-            showContainerMAIN.style.display="none";
+        const mostrarContainer_2 = () => {
+
+            showContainerMAIN_2.style.display = "block";
+            showContainerMAIN.style.display = "none";
         }
 
-        boton_Siguiente.addEventListener("click",mostrarContainer_2);
-        boton_Siguiente_2.addEventListener("click",mostrarContainer);
+        boton_Siguiente.addEventListener("click", mostrarContainer_2);
+        boton_Siguiente_2.addEventListener("click", mostrarContainer);
 
     </script>
     <!-- <script type="module" src="modules_Kahoot_Prueba.js"></script> -->
