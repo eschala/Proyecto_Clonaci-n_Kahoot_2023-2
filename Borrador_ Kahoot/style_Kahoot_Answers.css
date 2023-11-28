@@ -129,6 +129,32 @@
     height: 70px;
     color: aliceblue;
 }
+.numAnswer{/* Numero de preguntas */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 0px solid blue;
+    background-color: rgb(132, 0, 255);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    color: aliceblue;
+
+}
+.numAnswer_VF{/* Numero de preguntas */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 0px solid blue;
+    background-color: rgb(132, 0, 255);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    color: aliceblue;
+
+}
 
 .Answer {/* Contador de Respuestas  */
     display: flex;
