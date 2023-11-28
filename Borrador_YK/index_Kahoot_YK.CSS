@@ -91,21 +91,9 @@ bottom: 0;
 position: absolute;
 }
 
-.info{
-    font-family: 'Montserrat';
-    color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
-}
-
 .xd5 {
-    font-family: 'Montserrat';
     color: #e0e0e0;
-    display: flex;
-    justify-content: center;
     font-weight: bold;
-    margin-left: 6px;
     text-decoration: none;
     }
 
@@ -149,7 +137,36 @@ position: absolute;
     text-decoration: underline;
 }
 
+/*Computador*/
+@media (width > 800px){
+.footerI {
+display: flex;
+width: 100%;
+font-family: 'Montserrat';
+color: #e0e0e0;
+justify-content: center;
+font-weight: 500;}
+
+.info2{
+margin-left: 6px;
+
+}
+
+}
+
 /* Celular*/
 @media (width < 600px){
-    
+.footerI {
+display: flex;
+flex-direction:column;
+width: 100%;
+font-family: 'Montserrat';
+color: #e0e0e0;
+justify-content: center;
+font-weight: 500;}
+
+.info2{
+ margin-left: 6px;
+        
+        }
 }
