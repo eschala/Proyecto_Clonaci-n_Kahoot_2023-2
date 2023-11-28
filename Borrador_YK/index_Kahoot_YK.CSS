@@ -25,8 +25,8 @@
     align-items: center;
 }
 .sub_Container_1{
-    width: 300px;
-    height: auto;
+    width: 95%;
+    height: 50%;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -75,12 +75,8 @@
 }
 
 .logo{
-background: url("https://assets-cdn.kahoot.it/controller/v2/assets/topbar_logo-58b66a21.svg") no-repeat center center;
-width: 200px;
-height: 200px;
-margin-top: 10px;
+    background: url("https://assets-cdn.kahoot.it/controller/v2/assets/topbar_logo-58b66a21.svg") no-repeat center center;
 }
-
 
 footer{
 font-size: 90%;
@@ -138,7 +134,7 @@ position: absolute;
 }
 
 /*Computador*/
-@media (width > 800px){
+@media (width > 600px){
 .footerI {
 display: flex;
 width: 100%;
@@ -148,7 +144,12 @@ justify-content: center;
 font-weight: 500;}
 
 .info2{
-margin-left: 6px;
+margin-left: 6px;}
+
+.logo{
+    width:15%;
+    height: 15%;
+    margin-top: 5%;
 
 }
 
@@ -167,6 +168,12 @@ font-weight: 500;}
 
 .info2{
  margin-left: 6px;
-        
-        }
+}
+.logo{
+    width:55%;
+    height: 55%;
+    margin-top: 3%;
+
+}
+
 }
