@@ -52,11 +52,7 @@ import {
 import { preguntasQuiz,quizElment } from "./Respuestas_Kahoot.js";
 import { ValidarTiempo } from "./Temporizador_Respuestas.js"; 
 
-
 setTimeout(ValidarTiempo,1000);
-
-
-
 
 quizElment();
 preguntasQuiz();

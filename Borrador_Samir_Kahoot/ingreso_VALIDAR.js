@@ -3,7 +3,6 @@
     location.href='AnswerDefault_Kahoot_SAMIR.html';
   };
 
-
 function ingresarJuego() {
   const pinInput = document.getElementById("pinInput").value;
 
@@ -16,6 +15,5 @@ function ingresarJuego() {
     alert("Por favor, ingresa un PIN válido.");
   }
 
-  
 
 }
