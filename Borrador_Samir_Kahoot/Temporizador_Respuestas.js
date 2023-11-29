@@ -41,124 +41,120 @@ import {
   buttonRespuesta2_VF,
 } from "./Variables_Kahoot copy.js";
 
-import {
-  preguntasQuiz,
-  quizElment,
-} from "./Respuestas_Kahoot.js";
-
-
+import { preguntasQuiz, quizElment } from "./Respuestas_Kahoot.js";
+const titulo_Siguiente_H = document.querySelector(".titulo_Siguiente");
+const titulo_Siguiente_H2 = document.querySelector(".titulo_Siguiente_2");
 
 const ValidarTiempo = () => {
   //Inicio
 
+  titulo_Siguiente_H.innerHTML="Iniciar";
+  titulo_Siguiente_H2.innerHTML="Iniciar";
+
   const intervaloSegundo = 1000;
 
   /* 
-  const timerElement = document.querySelector(".timer");
-  const numeradorRespuestas = document.querySelector(".numAnswer");
-  const textRespuesta = document.querySelector(".Answer");
-
-  const timerElement_VF = document.querySelector(".timer_VF");
-  const numeradorRespuestas_VF = document.querySelector(".numAnswer_VF");
-  const textRespuesta_VF = document.querySelector(".Answer_VF");
-
-
-    mainContainer.style.display = "block";
-  mainContainer_VF.style.display = "none";
+  const timerElement = document.querySelector(".timer");  const timerElement_VF = document.querySelector(".timer_VF");
+  const numeradorRespuestas = document.querySelector(".numAnswer");  const numeradorRespuestas_VF = document.querySelector(".numAnswer_VF");
+  const textRespuesta = document.querySelector(".Answer");  const textRespuesta_VF = document.querySelector(".Answer_VF");
   
   */
   let clicks = 0;
   let timerSet;
 
-  var duracionPregunta=3;
-var count = duracionPregunta;
+  var duracionPregunta = 3;
+  var count = duracionPregunta;
 
-const mostrarBotonSiguiente=()=>{
-
-  buttonSiguiente.style.display = "block";
-  buttonSiguiente_VF.style.display = "block";
-}
-const ocultarBotonSiguiente=()=>{
-
-  buttonSiguiente.style.display = "none";
-  buttonSiguiente_VF.style.display = "none";
-}
-const desactivarBotonSiguiente=()=>{
-
-  buttonSiguiente.disabled = false;
-  buttonSiguiente_VF.disabled = false;
-}
-const activarBotonSiguiente=()=>{
-
-  buttonSiguiente.disabled = false;
-  buttonSiguiente_VF.disabled = false;
-}
-const resetTimerPosicion=()=>{
-  timerElement.innerHTML=0+"s";
-  timerElement_VF.innerHTML=0+"s";
-}
-const mostrarTimerPosicion=()=>{
-  timerElement.innerHTML = count + "s";
-  timerElement_VF.innerHTML = count + "s";
-}
+  const mostrarBotonSiguiente = () => {
+    buttonSiguiente.style.display = "block";
+    buttonSiguiente_VF.style.display = "block";
+  };
+  const ocultarBotonSiguiente = () => {
+    buttonSiguiente.style.display = "none";
+    buttonSiguiente_VF.style.display = "none";
+  };
+  const desactivarBotonSiguiente = () => {
+    buttonSiguiente.disabled = true;
+    buttonSiguiente_VF.disabled = true;
+  };
+  const activarBotonSiguiente = () => {
+    buttonSiguiente.disabled = false;
+    buttonSiguiente_VF.disabled = false;
+  };
+  const resetTimerPosicion = () => {
+    timerElement.innerHTML = 0 + "s";
+    timerElement_VF.innerHTML = 0 + "s";
+  };
+  const mostrarTimerPosicion = () => {
+    timerElement.innerHTML = count + "s";
+    timerElement_VF.innerHTML = count + "s";
+  };
 
 
+  const redirigir_QuizKahoot = () => {
 
-
-
-
+    location.href='answers_Puntaje.html';
+  };
 
 
   const activarTiempo = () => {
     // element_botones_1.innerHTML="Reiniciar";
     clearInterval(timerSet);
     timerSet = setInterval(contarSegundos, intervaloSegundo);
-};
-
+  };
 
   const contarSegundos = () => {
-
     ocultarBotonSiguiente();
     count--;
-mostrarTimerPosicion();
+    mostrarTimerPosicion();
 
-    if (count <= 0) {        
+    if (count <= 0) {
       ocultarBotonSiguiente();
-        activarTiempo();
-        activarBotonSiguiente();
-
+      activarTiempo();
+      activarBotonSiguiente();
     } else {
-desactivarBotonSiguiente();
+      desactivarBotonSiguiente();
     }
 
     if (count == duracionPregunta) {
       ocultarBotonSiguiente();
     } else {
       mostrarBotonSiguiente();
-
     }
-    if(count<0){
+    if (count < 0) {
       resetTimerPosicion();
-    }else{
+    } else {
       mostrarTimerPosicion();
-
     }
-};
+  };
+
+const sectionStartContainer=document.querySelector(".container_2__sub_3");
+sectionStartContainer.style.display="block";
+
+
 
 const contarCLICKS = () => {
-  if(clicks==0){
-    desactivarBotonSiguiente();
+  titulo_Siguiente_H.innerHTML="Siguiente";
+  titulo_Siguiente_H2.innerHTML="Siguiente";
+  sectionStartContainer.style.display="none";
 
 
-  }
+
+
+    if (clicks == 0) {
+      desactivarBotonSiguiente();
+    }
     clicks++;
-    
+      if(clicks>2){
 
-}
+        redirigir_QuizKahoot();
+      }
 
-const reiniciarContador = () => {
 
-  
+
+  };
+
+  const reiniciarContador = () => {
     clearInterval(timerSet);
     count = duracionPregunta;
     mostrarTimerPosicion();
@@ -166,13 +162,13 @@ const reiniciarContador = () => {
     if (count == duracionPregunta) {
       ocultarBotonSiguiente();
     } else {
-        mostrarBotonSiguiente();
+      mostrarBotonSiguiente();
     }
 
     activarTiempo();
-};
+  };
 
-const detenerContador = () => {
+  const detenerContador = () => {
     clearInterval(timerSet);
     textRespuesta.innerHTML = "Tiempo detenido";
     textRespuesta_VF.innerHTML = "Tiempo detenido";
@@ -180,18 +176,18 @@ const detenerContador = () => {
     buttonSiguiente_VF.style.display = "block";
     buttonSiguiente.disabled = false;
     buttonSiguiente_VF.disabled = false;
-    buttonSiguiente.innerHTML="Iniciar";
-    buttonSiguiente_VF.innerHTML="Iniciar";
-};
+    buttonSiguiente.innerHTML = "Iniciar";
+    buttonSiguiente_VF.innerHTML = "Iniciar";
+  };
 
-// element_botones_1.addEventListener("click", reiniciarContador);
-buttonSiguiente.addEventListener("click", contarCLICKS,);
-buttonSiguiente.addEventListener("click", reiniciarContador);
-buttonSiguiente_VF.addEventListener("click", contarCLICKS,);
-buttonSiguiente_VF.addEventListener("click", reiniciarContador);
-// element_botones_2.addEventListener("click", detenerContador);
+ 
+  buttonSiguiente.addEventListener("click", contarCLICKS);
+  buttonSiguiente.addEventListener("click", reiniciarContador);
+  buttonSiguiente_VF.addEventListener("click", contarCLICKS);
+  buttonSiguiente_VF.addEventListener("click", reiniciarContador);
 
-activarTiempo();
+
+  activarTiempo();
 
   // FIN
 };
