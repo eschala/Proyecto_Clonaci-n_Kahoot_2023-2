@@ -69,6 +69,8 @@
     position: absolute;
 
     right: 200px;
+
+
     
 }
     .btn_Siguiente{
@@ -78,6 +80,7 @@
         
     }
         .titulo_Siguiente{
+            display: block;
             
         }
 
@@ -202,6 +205,25 @@
     color: aliceblue;
 
 }
+.container_2__sub_3{
+
+cursor: pointer;
+
+}
+.message_Sub_Sub{
+    font-size: 3rem;
+    color: rgb(70, 23, 143);
+}
+.message_Sub_Sub:hover{
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+
+    background-color:rgba(71, 23, 143, 0.346);
+    border-radius: 25px;
+    padding: 20px;
+
+}
+
 .numAnswer_VF{/* Numero de preguntas */
     display: flex;
     justify-content: center;
@@ -247,6 +269,8 @@
     color: #fff;
     opacity: 1;
 
+    font-size: 2rem;
+
     display: flex;
 
     align-items: center;
@@ -287,7 +311,7 @@ img{
 
 .Answer_3 {
     /* boton Respuesta 3 */
-    background-color: rgb(232, 192, 47);
+    background-color: rgb(228, 182, 17);
     color: aliceblue;
     font-weight: 500;
 }

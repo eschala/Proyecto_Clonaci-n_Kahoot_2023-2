@@ -60,16 +60,13 @@ const ValidarTiempo = () => {
   const numeradorRespuestas_VF = document.querySelector(".numAnswer_VF");
   const textRespuesta_VF = document.querySelector(".Answer_VF");
 
-
-    mainContainer.style.display = "block";
-  mainContainer_VF.style.display = "none";
   
   */
   
   let clicks = 0;
   let timerSet;
 
-  var duracionPregunta=10;
+  var duracionPregunta=2;
 var count = duracionPregunta;
 
   const activarTiempo = () => {
@@ -78,20 +75,7 @@ var count = duracionPregunta;
     timerSet = setInterval(contarSegundos, intervaloSegundo);
 };
 
-/*   var contarSegundos = () => {
-    count++;
-    timerElement.innerHTML = count + "s";
 
-    if (
-      mainContainer_VF.style.display !== "none" ||
-      mainContainer_VF.style.display === "block" ||
-      mainContainer_VF.style.display === "flex"
-    ) {
-      clearInterval(timerSet);
-      timerElement_VF.innerHTML = count + "s";
-      activarTiempo();
-    }
-  }; */
   const contarSegundos = () => {
     count--;
     timerElement.innerHTML = count + "s";
@@ -124,12 +108,16 @@ var count = duracionPregunta;
 };
 
 const contarCLICKS = () => {
+  if(clicks==0){
+    buttonSiguiente.disabled = false;
+    buttonSiguiente_VF.disabled = false;
+
+
+  }
     clicks++;
-/*     textRespuesta.innerHTML = clicks + " clicks";
-    textRespuesta_VF.innerHTML = clicks + " clicks"; */
-/*     textRespuesta.innerHTML = clicks + "";
-    textRespuesta_VF.innerHTML = clicks + ""; */
-};
+    
+
+}
 
 const reiniciarContador = () => {
     clearInterval(timerSet);
@@ -137,7 +125,7 @@ const reiniciarContador = () => {
     timerElement.innerHTML = count + "s";
     timerElement_VF.innerHTML = count + "s";
 
-    if (count == 10) {
+    if (count == duracionPregunta) {
         buttonSiguiente.style.display = "none";
         buttonSiguiente_VF.style.display = "none";
     } else {

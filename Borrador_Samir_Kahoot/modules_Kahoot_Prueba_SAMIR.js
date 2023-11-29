@@ -49,8 +49,12 @@ import {
 } from "./Variables_Kahoot copy.js";
 
 
-import { preguntasQuiz,quizElment } from "./Respuestas_Kahoot.js";
+
+
+
+import { preguntasQuiz,quizElment} from "./Respuestas_Kahoot.js";
 import { ValidarTiempo } from "./Temporizador_Respuestas.js"; 
+
 
 setTimeout(ValidarTiempo,1000);
 

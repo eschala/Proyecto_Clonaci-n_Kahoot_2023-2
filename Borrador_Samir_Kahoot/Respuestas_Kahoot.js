@@ -114,12 +114,12 @@ const preguntasQuiz = () => {
   let respuesta_1 = "Maicol Yordan";
   let respuesta_2 = "Michael Jeffrey Jhordan";
   let respuesta_3 = "Dennis Keith Rodman";
-  let respuesta_C = "Jhordan Moreno";
+  let respuesta_C = "Jhordan Rodman Moreno";
 
-  const pregunta_Quiz = ["2+2", preguntaRandom];
+  const pregunta_Quiz = [" ¿Cuanto es 2+2?", preguntaRandom];
   const opcion_Quiz = ["6", respuesta_1];
-  const opcion_Quiz2 = ["7", respuesta_2];
-  const opcion_Quiz3 = ["2aaaaaaaaaaaaa", respuesta_3];
+  const opcion_Quiz2 = ["Cuañquiera de las 4", respuesta_2];
+  const opcion_Quiz3 = ["2", respuesta_3];
   const opcion_Correcta = ["4", respuesta_C];
 
   const pregunta_QuizVF = ["2+2 es 4?", "JavaScript es con P de perro?"];
@@ -142,8 +142,9 @@ const preguntasQuiz = () => {
     opcion_Quiz2[1],
     opcion_Quiz3[1]
   );
-  var posicionPregunta;
+  var posicionPregunta=0;
   const mostrarInfoQuiz = () => {
+    posicionPregunta=1;
     subContainer.innerHTML = answer1.getPregunta();
     buttonRespuesta1.innerHTML = answer1.getOpcionC();
     buttonRespuesta2.innerHTML = answer1.getOpcionI();
@@ -157,13 +158,14 @@ const preguntasQuiz = () => {
     buttonRespuesta3.innerHTML = answer2.getOpcionI2();
     buttonRespuesta4.innerHTML = answer2.getOpcionI3();
   };
-  mostrarInfoQuiz();
+
   // Pregunta 3
   const answer3 = new Quiz_VF(pregunta_QuizVF[0], opcion_V[0], opcion_F[0]);
   // Pregunta 4
   const answer4 = new Quiz_VF(pregunta_QuizVF[1], opcion_V[1], opcion_F[1]);
-  var posicionPreguntaVF;
+  var posicionPreguntaVF=0;
   const mostrarInfoQuiz_VF = () => {
+    posicionPreguntaVF=3;
     subContainer_VF.innerHTML = answer3.getPregunta();
     buttonRespuesta1_VF.innerHTML = answer3.getOpcionV();
     buttonRespuesta2_VF.innerHTML = answer3.getOpcionF();
@@ -193,7 +195,8 @@ const preguntasQuiz = () => {
       quizElmentVF();
     }
 
-    if (contarSiguiente <= 1) {
+    if (contarSiguiente == 1) {
+
       mostrarInfoQuiz();
       // alert("ronda " + 1);
     }
@@ -211,9 +214,6 @@ const preguntasQuiz = () => {
     contarSiguiente++;
   };
 
-  buttonSiguiente.addEventListener("click", siguienteFunction);
-
-  buttonSiguiente_VF.addEventListener("click", siguienteFunction);
 }; //Fin
 
-export { preguntasQuiz, quizElment };
+export { preguntasQuiz, quizElment};
