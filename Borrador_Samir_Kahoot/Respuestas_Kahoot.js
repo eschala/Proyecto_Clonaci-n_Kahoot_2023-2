@@ -110,12 +110,17 @@ const preguntasQuiz = () => {
       return this.opcionF;
     }
   }
+  let preguntaRandom = "El nombre del profesor es: ...";
+  let respuesta_1="Maicol Yordan";
+  let respuesta_2="Michael Jeffrey Jhordan";
+  let respuesta_3="Dennis Keith Rodman";
+  let respuesta_C="Jhordan Moreno";
 
-  const pregunta_Quiz = ["2+2", "2+3"];
-  const opcion_Quiz = ["6", "2"];
-  const opcion_Quiz2 = ["7", "6"];
-  const opcion_Quiz3 = ["2aaaaaaaaaaaaa", "3"];
-  const opcion_Correcta = ["4", "5"];
+  const pregunta_Quiz = ["2+2", preguntaRandom];
+  const opcion_Quiz = ["6", respuesta_1];
+  const opcion_Quiz2 = ["7", respuesta_2];
+  const opcion_Quiz3 = ["2aaaaaaaaaaaaa", respuesta_3];
+  const opcion_Correcta = ["4",respuesta_C];
 
   const pregunta_QuizVF = ["2+2 es 4?", "JavaScript es con P de perro?"];
   const opcion_V = ["Verdadero", "Falso"];
@@ -171,20 +176,49 @@ const preguntasQuiz = () => {
   mostrarInfoQuiz_VF();
 
   var contarSiguiente = 1;
+  var savedCounted=0;
 
   // textRespuesta_VF.innerHTML = "" + contarSiguiente;
   // textRespuesta.innerHTML = "" + contarSiguiente;
   const siguienteFunction = () => {
-    textRespuesta.innerHTML = "" + contarSiguiente;
+    savedCounted=contarSiguiente;
+    numeradorRespuestas.innerHTML =  contarSiguiente;
 
     if (contarSiguiente > 2) {
-      alert("ronda " + contarSiguiente);
+      
 
-      textRespuesta_VF.innerHTML = "" + contarSiguiente;
+      numeradorRespuestas_VF.innerHTML = contarSiguiente;
+      if(contarSiguiente>4){
+        // alert("Ya exediste las rondas");
 
+      }
       
       quizElmentVF();
     }
+
+    if(contarSiguiente<=1){mostrarInfoQuiz();
+    // alert("ronda " + 1);
+    }
+    if(contarSiguiente==2){siguienteQuiz();
+      
+
+    }
+    if(contarSiguiente==3){mostrarInfoQuiz_VF();
+      // alert("ronda " + 2);
+    }
+    if(contarSiguiente==4){siguienteQuizVF();
+
+    }
+
+
+
+
+
+
+
+
+
+
     contarSiguiente++;
   };
 

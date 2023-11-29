@@ -72,6 +72,7 @@
     
 }
     .btn_Siguiente{
+        border-radius: 25px;
         
     }
         .titulo_Siguiente{
@@ -365,9 +366,12 @@ img{
             
         }
             .btn_Siguiente_2{
+                display: block;
+                border-radius: 25px;
                 
             }
                 .titulo_Siguiente_2{
+                    display: block;
                     
                 }
     .container_2_VF{/* Contenedor hijo de mainContainer_Answer_VF */
