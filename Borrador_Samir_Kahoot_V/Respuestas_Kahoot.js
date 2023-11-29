@@ -54,25 +54,6 @@ const quizElmentVF = () => {
   mainContainer_VF.style.display = "block";
 };
 
-timerElement.innerHTML="";
-numeradorRespuestas.innerHTML=0;
-textRespuesta.innerHTML="Answers";
-timerElement_VF.innerHTML=0;
-numeradorRespuestas_VF.innerHTML=0;
-textRespuesta_VF.innerHTML="Answers";
-
-const texto__V= document.querySelector(".texto_V");
-const texto__F= document.querySelector(".texto_F");
-
-
-texto__V.style.fontSize="3rem";
-buttonRespuesta1_VF.style.fontSize="3rem";
-texto__F.style.fontSize="3rem";
-buttonRespuesta2_VF.style.fontSize="3rem";
-
-
-
-
 const preguntasQuiz = () => {
   //Inicio
   /* alert("probando"); */
@@ -82,11 +63,6 @@ const preguntasQuiz = () => {
   // respuestas 2 buttonRespuestas
   // respuestas 3 buttonRespuestas
   // respuestas 4 buttonRespuestas
-
-
-
-
-
 
   class Quiz {
     constructor(pregunta, opcionC, opcionI, opcionI2, opcionI3) {
@@ -166,8 +142,9 @@ const preguntasQuiz = () => {
     opcion_Quiz2[1],
     opcion_Quiz3[1]
   );
-  var posicionPregunta;
+  var posicionPregunta=0;
   const mostrarInfoQuiz = () => {
+    posicionPregunta=1;
     subContainer.innerHTML = answer1.getPregunta();
     buttonRespuesta1.innerHTML = answer1.getOpcionC();
     buttonRespuesta2.innerHTML = answer1.getOpcionI();
@@ -186,8 +163,9 @@ const preguntasQuiz = () => {
   const answer3 = new Quiz_VF(pregunta_QuizVF[0], opcion_V[0], opcion_F[0]);
   // Pregunta 4
   const answer4 = new Quiz_VF(pregunta_QuizVF[1], opcion_V[1], opcion_F[1]);
-  var posicionPreguntaVF;
+  var posicionPreguntaVF=0;
   const mostrarInfoQuiz_VF = () => {
+    posicionPreguntaVF=3;
     subContainer_VF.innerHTML = answer3.getPregunta();
     buttonRespuesta1_VF.innerHTML = answer3.getOpcionV();
     buttonRespuesta2_VF.innerHTML = answer3.getOpcionF();
@@ -200,7 +178,7 @@ const preguntasQuiz = () => {
   mostrarInfoQuiz_VF();
 
   var contarSiguiente = 1;
-  var savedCounted=0;
+  var savedCounted = 0;
 
 
   const siguienteFunction = () => {
@@ -210,7 +188,7 @@ const preguntasQuiz = () => {
     if (contarSiguiente > 2) {
       numeradorRespuestas_VF.innerHTML = contarSiguiente;
       if (contarSiguiente > 4) {
-
+        // alert("Ya exediste las rondas");
       }
 
       quizElmentVF();
@@ -219,14 +197,14 @@ const preguntasQuiz = () => {
     if (contarSiguiente == 1) {
 
       mostrarInfoQuiz();
-
+      // alert("ronda " + 1);
     }
     if (contarSiguiente == 2) {
       siguienteQuiz();
     }
     if (contarSiguiente == 3) {
       mostrarInfoQuiz_VF();
-
+      // alert("ronda " + 2);
     }
     if (contarSiguiente == 4) {
       siguienteQuizVF();
@@ -235,13 +213,6 @@ const preguntasQuiz = () => {
     contarSiguiente++;
   };
 
-
-
-
-
-  buttonSiguiente.addEventListener("click", siguienteFunction);
-
-  buttonSiguiente_VF.addEventListener("click", siguienteFunction);
 }; //Fin
 
-export { preguntasQuiz, quizElment };
+export { preguntasQuiz, quizElment};

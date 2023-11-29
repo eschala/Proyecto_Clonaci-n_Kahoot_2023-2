@@ -46,8 +46,6 @@ import {
   quizElment,
 } from "./Respuestas_Kahoot.js";
 
-
-
 const ValidarTiempo = () => {
   //Inicio
 
@@ -62,52 +60,14 @@ const ValidarTiempo = () => {
   const numeradorRespuestas_VF = document.querySelector(".numAnswer_VF");
   const textRespuesta_VF = document.querySelector(".Answer_VF");
 
-
-    mainContainer.style.display = "block";
-  mainContainer_VF.style.display = "none";
   
   */
+  
   let clicks = 0;
   let timerSet;
 
-  var duracionPregunta=3;
+  var duracionPregunta=2;
 var count = duracionPregunta;
-
-const mostrarBotonSiguiente=()=>{
-
-  buttonSiguiente.style.display = "block";
-  buttonSiguiente_VF.style.display = "block";
-}
-const ocultarBotonSiguiente=()=>{
-
-  buttonSiguiente.style.display = "none";
-  buttonSiguiente_VF.style.display = "none";
-}
-const desactivarBotonSiguiente=()=>{
-
-  buttonSiguiente.disabled = false;
-  buttonSiguiente_VF.disabled = false;
-}
-const activarBotonSiguiente=()=>{
-
-  buttonSiguiente.disabled = false;
-  buttonSiguiente_VF.disabled = false;
-}
-const resetTimerPosicion=()=>{
-  timerElement.innerHTML=0+"s";
-  timerElement_VF.innerHTML=0+"s";
-}
-const mostrarTimerPosicion=()=>{
-  timerElement.innerHTML = count + "s";
-  timerElement_VF.innerHTML = count + "s";
-}
-
-
-
-
-
-
-
 
   const activarTiempo = () => {
     // element_botones_1.innerHTML="Reiniciar";
@@ -117,37 +77,40 @@ const mostrarTimerPosicion=()=>{
 
 
   const contarSegundos = () => {
-
-    ocultarBotonSiguiente();
     count--;
-mostrarTimerPosicion();
+    timerElement.innerHTML = count + "s";
+    timerElement_VF.innerHTML = count + "s";
 
-    if (count <= 0) {        
-      ocultarBotonSiguiente();
+    if (count <= 0) {
         activarTiempo();
-        activarBotonSiguiente();
-
+        buttonSiguiente.disabled = false;
+        buttonSiguiente_VF.disabled = false;
     } else {
-desactivarBotonSiguiente();
+        buttonSiguiente.disabled = true;
+        buttonSiguiente_VF.disabled = true;
     }
 
     if (count == duracionPregunta) {
-      ocultarBotonSiguiente();
+        buttonSiguiente.style.display = "none";
+        buttonSiguiente_VF.style.display = "none";
     } else {
-      mostrarBotonSiguiente();
-
+        buttonSiguiente.style.display = "block";
+        buttonSiguiente_VF.style.display = "block";
     }
     if(count<0){
-      resetTimerPosicion();
+        timerElement.innerHTML=0+"s";
+        timerElement_VF.innerHTML=0+"s";
     }else{
-      mostrarTimerPosicion();
+        timerElement.innerHTML = count + "s";
+        timerElement_VF.innerHTML = count + "s";
 
     }
 };
 
 const contarCLICKS = () => {
   if(clicks==0){
-    desactivarBotonSiguiente();
+    buttonSiguiente.disabled = false;
+    buttonSiguiente_VF.disabled = false;
 
 
   }
@@ -157,16 +120,17 @@ const contarCLICKS = () => {
 }
 
 const reiniciarContador = () => {
-
-  
     clearInterval(timerSet);
     count = duracionPregunta;
-    mostrarTimerPosicion();
+    timerElement.innerHTML = count + "s";
+    timerElement_VF.innerHTML = count + "s";
 
     if (count == duracionPregunta) {
-      ocultarBotonSiguiente();
+        buttonSiguiente.style.display = "none";
+        buttonSiguiente_VF.style.display = "none";
     } else {
-        mostrarBotonSiguiente();
+        buttonSiguiente.style.display = "block";
+        buttonSiguiente_VF.style.display = "block";
     }
 
     activarTiempo();
