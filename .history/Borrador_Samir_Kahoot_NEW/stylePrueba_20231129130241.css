@@ -1,0 +1,72 @@
+.container {
+
+    width: 100%;
+    height: 600px;
+    background-color: blueviolet;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sectionContainer {
+
+    height: 200px;
+    width: 800px;
+
+    background-color: blue;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+
+    font-size: 3rem;
+    padding: 30px;
+}
+
+.sub_Container_2 {
+
+    height: 200px;
+    width: 800px;
+
+    background-color: red;
+
+    display: flex;
+
+}
+
+.btn_content {
+    height: 150px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.div_btn_1 {
+    width: 100%;
+}
+
+.div_btn_2 {
+    width: 100%;
+}
+
+.botones_1 {
+
+    height: 95%;
+    width: 95%;
+
+
+
+}
+
+.botones_2 {
+
+    height: 95%;
+    width: 95%;
+
+}

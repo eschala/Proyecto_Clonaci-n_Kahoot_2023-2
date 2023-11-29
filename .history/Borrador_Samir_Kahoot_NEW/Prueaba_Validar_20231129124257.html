@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+
+            width: 100%;
+            height: 600px;
+            background-color: blueviolet;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .sub_Container_1 {
+
+            height: 200px;
+            width: 800px;
+
+            background-color: blue;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: aliceblue;
+
+            font-size: 50px;
+            padding: 30px;
+        }
+
+        .sub_Container_2 {
+
+            height: 200px;
+            width: 800px;
+
+            background-color: red;
+
+            display: flex;
+
+        }
+
+        .div_btn {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .div_btn_1 {
+            width: 100%;
+        }
+
+        .div_btn_2 {
+            width: 100%;
+        }
+
+        .botones_1 {
+
+            height: 95%;
+            width: 95%;
+
+
+
+        }
+
+        .botones_2 {
+
+            height: 95%;
+            width: 95%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="sub_Container_1">
+            <h2 class="h2">insertar</h2>
+            <h3 class="counterScreen">counter</h3>
+            <h3 class="counterScreen_2">counter 2</h3>
+        </div>
+        <div class="sub_Container_2">
+            <div class="div_btn div_btn_1">
+                <button type="button" class="botones_1">Reiniciar</button>
+            </div>
+            <div class="div_btn div_btn_2">
+                <button type="button" class="botones_2">Detener</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="respuesta_VALIDAR">
+        const element_counterScreen = document.querySelector(".counterScreen");
+        const element_counterScreen_2 = document.querySelector(".counterScreen_2");
+        const element_botones_1 = document.querySelector(".botones_1");
+        const element_botones_2 = document.querySelector(".botones_2");
+
+        let count = 10;
+        let clicks = 0;
+        let timerSet;
+
+        element_counterScreen.innerHTML = count + "s";
+
+        const activarTiempo = () => {
+            element_botones_1.innerHTML="Reiniciar";
+            clearInterval(timerSet);
+            timerSet = setInterval(contarSegundos, 1000);
+        };
+
+        const contarSegundos = () => {
+            count--;
+            element_counterScreen.innerHTML = count + "s";
+
+            if (count <= 0) {
+                activarTiempo();
+                element_botones_1.disabled = false;
+            } else {
+                element_botones_1.disabled = true;
+            }
+
+            if (count == 10) {
+                element_botones_1.style.display = "none";
+            } else {
+                element_botones_1.style.display = "block";
+            }
+            if(count<0){
+                element_counterScreen.innerHTML=0+"s";
+            }else{
+                element_counterScreen.innerHTML = count + "s";
+
+            }
+        };
+
+        const contarCLICKS = () => {
+            clicks++;
+            element_counterScreen_2.innerHTML = clicks + " clicks";
+        };
+
+        const reiniciarContador = () => {
+            clearInterval(timerSet);
+            count = 10;
+            element_counterScreen.innerHTML = count + "s";
+
+            if (count == 10) {
+                element_botones_1.style.display = "none";
+            } else {
+                element_botones_1.style.display = "block";
+            }
+
+            activarTiempo();
+        };
+
+        const detenerContador = () => {
+            clearInterval(timerSet);
+            element_counterScreen.innerHTML = "Tiempo detenido";
+            element_botones_1.style.display = "block";
+            element_botones_1.disabled = false;
+            element_botones_1.innerHTML="Iniciar";
+        };
+
+        element_botones_1.addEventListener("click", reiniciarContador);
+        element_botones_1.addEventListener("click", contarCLICKS);
+        element_botones_2.addEventListener("click", detenerContador);
+
+        activarTiempo();
+    </script>
+</body>
+
+</html>
+
