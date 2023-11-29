@@ -119,6 +119,35 @@ position: absolute;
 .private:hover{
     text-decoration: underline;
 }
+header{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+    text-align: center;
+    background-color: white;
+    width: 60px;
+    height: 32px;
+    border-radius: 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: -5px ;
+}
+.xd4{
+color: #333333;
+text-decoration: none;
+}
+
+.mundo{
+    cursor: pointer;
+}
 
 /*Computador*/
 @media (width > 600px){
