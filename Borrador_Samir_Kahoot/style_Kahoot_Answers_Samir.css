@@ -75,8 +75,6 @@
 }
     .btn_Siguiente{
         border-radius: 25px;
-
-        cursor: pointer;
         
     }
         .titulo_Siguiente{
@@ -398,7 +396,6 @@ img{
             .btn_Siguiente_2{
                 display: block;
                 border-radius: 25px;
-                cursor: pointer;
                 
             }
                 .titulo_Siguiente_2{
@@ -434,7 +431,6 @@ img{
         align-items: center;
         border: 0px solid blue;
         background-color: rgb(132, 0, 255);
-        background: rgb(70, 23, 143);
         border-radius: 50%;
         width: 70px;
         height: 70px;
@@ -448,7 +444,6 @@ img{
         align-items: center;
         border: 0px solid blue;
         background-color: rgb(132, 0, 255);
-        background: rgb(70, 23, 143);
 
         border-radius: 100px;
 
@@ -512,9 +507,6 @@ img{
                 padding: 30px;
 
                 border-radius: 5px;
-            }
-            .btn_Answer_VF:hover{
-                opacity: 85%;
             }
                 .img_Select{
                    display: block;
