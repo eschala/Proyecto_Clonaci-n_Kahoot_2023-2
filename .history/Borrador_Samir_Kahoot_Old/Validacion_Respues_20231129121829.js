@@ -1,4 +1,3 @@
-
 import {
   bodyElement,
   mainContainer,
@@ -42,16 +41,16 @@ import {
   buttonRespuesta2_VF,
 } from "./Variables_Kahoot copy.js";
 
+import { preguntasQuiz, quizElment } from "./Respuestas_Kahoot.js";
+import { ValidarTiempo } from "./Temporizador_Respuestas.js";
+
+const ValidarRespuestas = () => {
+
+    
 
 
 
 
-import { preguntasQuiz,quizElment} from "./Respuestas_Kahoot.js";
-import { ValidarTiempo } from "./Temporizador_Respuestas.js"; 
-import { ValidarRespuestas } from "./Validacion_Respues.js"; 
+};
 
-
-setTimeout(ValidarTiempo,1000);
-
-quizElment();
-preguntasQuiz();
+export { ValidarRespuestas };

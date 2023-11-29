@@ -1,3 +1,9 @@
+/* import { aaa } from "./4_Respuestas.js";
+
+
+import { aaa } from "./validar_Ingreso_Indez_Kahoot.js";
+import { aaa } from "./Temporizador_Respuestas.js"; */
+
 
 import {
   bodyElement,

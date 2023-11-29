@@ -1,3 +1,9 @@
+/* import { aaa } from "./4_Respuestas.js";
+
+
+import { aaa } from "./validar_Ingreso_Indez_Kahoot.js";
+import { aaa } from "./Temporizador_Respuestas.js"; */
+
 
 import {
   bodyElement,
@@ -48,7 +54,7 @@ import {
 
 import { preguntasQuiz,quizElment} from "./Respuestas_Kahoot.js";
 import { ValidarTiempo } from "./Temporizador_Respuestas.js"; 
-import { ValidarRespuestas } from "./Validacion_Respues.js"; 
+import { ValidarRespuestas } from "./Validacion.js"; 
 
 
 setTimeout(ValidarTiempo,1000);
