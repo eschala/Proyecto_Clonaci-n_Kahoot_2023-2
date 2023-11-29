@@ -213,6 +213,18 @@ margin-left: 6px;}
 
 /* Celular*/
 @media (width < 600px){
+
+.body_Ingreso{
+    background-image: url(img/fondo.jpg);
+    background-size: cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    }
+
 .footerI {
 display: flex;
 flex-direction:column;
