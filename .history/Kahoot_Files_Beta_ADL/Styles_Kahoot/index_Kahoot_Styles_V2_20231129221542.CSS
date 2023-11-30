@@ -1,0 +1,53 @@
+body{
+    background-image: url(/Borrador_Samir_Kahoot/img/fondo.jpg);
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    |    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-size: 100% 100%;
+}
+
+.score-table-container{
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#score-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#score-table th, #score-table td{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#score-table th{
+    background-color: #f2f2f2;
+}
+
+.countdown-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #countdown {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+  }
+  
+
+  /* Agrega esto al final de tu archivo styles.css */
+#score-container {
+    display: none; /* Ocultar inicialmente */
+  }
+  

@@ -1,0 +1,236 @@
+.body_Ingreso{
+    background-image: url(/Kahoot_Files_Beta_ADL/img/fondo.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
+body{
+    background-image: url(/Borrador_Samir_Kahoot/img/fondo.jpg);
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-size: 100% 100%;
+}
+
+.score-table-container{
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#score-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#score-table th, #score-table td{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#score-table th{
+    background-color: #f2f2f2;
+}
+
+.countdown-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #countdown {
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+  }
+  
+
+  /* Agrega esto al final de tu archivo styles.css */
+#score-container {
+    display: none; /* Ocultar inicialmente */
+  }
+  
+
+/*Computador*/
+@media (width > 600px){
+.footerI {
+display: flex;
+width: 100%;
+font-family: 'Montserrat';
+color: #e0e0e0;
+justify-content: center;
+font-weight: 500;}
+
+.info2{
+margin-left: 6px;}
+
+.logo{
+    width:15%;
+    height: 15%;
+    margin-top:5%;
+    margin-inline: 20px;
+}
+
+.sub_Container_1{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    margin-bottom: 3%;
+}
+
+
+}
+
+/* Celular*/
+@media (width < 600px){
+
+.body_Ingreso{
+    background-image: url(/Kahoot_Files_Beta_ADL/img/fondo.jpg);
+    background-size: cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    }
+
+.footerI {
+display: flex;
+flex-direction:column;
+width: 100%;
+font-family: 'Montserrat';
+color: #e0e0e0;
+justify-content: center;
+font-weight: 500;}
+
+.info1{
+line-height: normal;
+height: 20px;
+margin-bottom: auto;
+}
+
+.info2{
+ line-height: normal;
+ margin-bottom: 3%;
+}
+.logo{
+    width:53%;
+    height:53%;
+    margin-top: 28%;
+
+}
+
+.sub_Container_1{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    margin-bottom: 50%;
+}
+
+header{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+    text-align: center;
+    background-color: white;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+}
+
+nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        margin-left: -1px ;
+    }
+.xd4{
+    font-size: 0;
+}
+
+}
+
+body{
+    background-image: url(/Borrador_Samir_Kahoot/img/fondo.jpg);
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-size: 100% 100%;
+}
+
+.score-table-container{
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#score-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#score-table th, #score-table td{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#score-table th{
+    background-color: #f2f2f2;
+}
+
+.countdown-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #countdown {
+    font-size: 36px;
+    color: #d1d1d1;
+    margin: 0;
+  }
+  
+
+  /* Agrega esto al final de tu archivo styles.css */
+#score-container {
+    display: none; /* Ocultar inicialmente */
+  }
+  
