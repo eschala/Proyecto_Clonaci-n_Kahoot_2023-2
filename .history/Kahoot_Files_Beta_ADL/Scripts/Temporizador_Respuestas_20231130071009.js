@@ -45,20 +45,11 @@ import { preguntasQuiz, quizElment } from "./Respuestas_Kahoot.js";
 const titulo_Siguiente_H = document.querySelector(".titulo_Siguiente");
 const titulo_Siguiente_H2 = document.querySelector(".titulo_Siguiente_2");
 
-const div_Answer_1_Elment = document.querySelector(".div_Answer_1");
-const div_Answer_2_Elment = document.querySelector(".div_Answer_2");
-const div_Answer_3_Elment = document.querySelector(".div_Answer_3");
-const div_Answer_4_Elment = document.querySelector(".div_Answer_3");
-
-const div_Answer_1_V_E = document.querySelector(".div_Answer_1_V");
-const div_Answer_2_F_E = document.querySelector(".div_Answer_2_F");
-
-
 const ValidarTiempo = () => {
   //Inicio
 
-  titulo_Siguiente_H.innerHTML = "Iniciar";
-  titulo_Siguiente_H2.innerHTML = "Iniciar";
+  titulo_Siguiente_H.innerHTML="Iniciar";
+  titulo_Siguiente_H2.innerHTML="Iniciar";
 
   const intervaloSegundo = 1000;
 
@@ -97,7 +88,7 @@ const ValidarTiempo = () => {
 
   const redirigir_QuizKahoot = () => {
 
-    location.href = '/Kahoot_Files_Beta_ADL/Kahoot_Puntaje.html';
+    location.href='/Kahoot_Files_Beta_ADL/Kahoot_Puntaje.html';
   };
 
 
@@ -118,14 +109,14 @@ const ValidarTiempo = () => {
       activarTiempo();
       activarBotonSiguiente();
 
-
+  
     } else {
       desactivarBotonSiguiente();
     }
 
     if (count == duracionPregunta) {
-
-
+      
+      
       ocultarBotonSiguiente();
     } else {
       mostrarBotonSiguiente();
@@ -143,59 +134,34 @@ const ValidarTiempo = () => {
     }
   };
 
-  const sectionStartContainer = document.querySelector(".container_2__sub_3");
-  sectionStartContainer.style.display = "block";
-
-  var randomN = 0;
-  var randomN2 = 0;
-  var randomN3 = 0;
-  var randomN4 = 0;
+const sectionStartContainer=document.querySelector(".container_2__sub_3");
+sectionStartContainer.style.display="block";
 
 
 
+const contarCLICKS = () => {
+  titulo_Siguiente_H.innerHTML="Siguiente";
+  titulo_Siguiente_H2.innerHTML="Siguiente";
+  sectionStartContainer.style.display="none";
 
 
-  const contarCLICKS = () => {
-    titulo_Siguiente_H.innerHTML = "Siguiente";
-    titulo_Siguiente_H2.innerHTML = "Siguiente";
-    sectionStartContainer.style.display = "none";
 
-    randomN = (Math.random()) * 10;
-    randomN = Math.round(randomN);
-
-    randomN2 = (Math.random()) * 7;
-    randomN2 = Math.round(randomN2);
-
-    randomN4 = (Math.random()) * 5;
-    randomN3 = Math.round(randomN3);
-
-    randomN4 = (Math.random()) * 10;
-    randomN4 = Math.round(randomN4);
-
-    div_Answer_1_Elment.style.order = randomN;
-    div_Answer_2_Elment.style.order = randomN2;
-    div_Answer_3_Elment.style.order = randomN3;
-    div_Answer_4_Elment.style.order = randomN4;
-
-    div_Answer_1_V_E.style.order = randomN2;
-    div_Answer_2_F_E.style.order = randomN4;
 
     if (clicks == 0) {
       desactivarBotonSiguiente();
     }
     clicks++;
-    if (clicks > 4) {
+      if(clicks>4){
 
-      redirigir_QuizKahoot();
-    }
+        redirigir_QuizKahoot();
+      }
 
-
-    buttonRespuesta1.style.opacity = "100%";
-    buttonRespuesta2.style.opacity = "100%";
-    buttonRespuesta3.style.opacity = "100%";
-    buttonRespuesta4.style.opacity = "100%";
-    buttonRespuesta1_VF.style.opacity = "100%";
-    buttonRespuesta2_VF.style.opacity = "100%";
+      buttonRespuesta1.style.opacity = "100%";
+      buttonRespuesta2.style.opacity = "100%";
+      buttonRespuesta3.style.opacity = "100%";
+      buttonRespuesta4.style.opacity = "100%";
+      buttonRespuesta1_VF.style.opacity = "100%";
+      buttonRespuesta2_VF.style.opacity = "100%";
 
   };
 
@@ -225,7 +191,7 @@ const ValidarTiempo = () => {
     buttonSiguiente_VF.innerHTML = "Iniciar";
   };
 
-
+ 
   buttonSiguiente.addEventListener("click", contarCLICKS);
   buttonSiguiente.addEventListener("click", reiniciarContador);
   buttonSiguiente_VF.addEventListener("click", contarCLICKS);
